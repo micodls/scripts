@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
-# CentOS
+# CentOS Virtual Machine Setup
+
+cd ~
+
 yum install git
+
 yum groupinstall "Development tools"
+yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
 
 # Python 2.7.11
 wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tar.xz
-tar xf Python-2.7.3.tar.bz2
-pushd Python-2.7.3
+tar xf Python-2.7.11.tar.xz
+pushd Python-2.7.11
 ./configure --prefix=/usr/local
 make && make altinstall
 popd
@@ -21,13 +26,13 @@ virtualenv <virtualenv_name> -p python2.7
 source <virtualenv_name>/bin/activate
 
 # Clone SmartSerice Recode
-mkdir "SmartService Recode"
+mkdir SmartService
 git clone http://pmdelossantos@10.11.8.1:7990/scm/~pmdelossantos/scripts.git
-pushd scripts
-./checkout_ssr.sh
+pushd SmartService
+../scripts/checkout_ssr.sh
 popd
 
-# For .so dependency
+# .so dependency
 echo "export LD_LIBRARY_PATH=/usr/local/lib:/usr/lib:$LD_LIBRARY_PATH" >> ~/.bash_profile
 source ~/.bash_profile
 
@@ -46,11 +51,63 @@ pushd redis-2.8.24
 make && make install
 popd
 
+# For Redis logs and config
+echo 1 > /proc/sys/vm/overcommit_memory
+mkdir -p /var/log/redis
+mkdir -p /etc/redis
+
 # SmartService dependencies
 # Install all
 # fn + f8 to exit
-SmartService\ Recode/smartservice_installers/install_scripts/smartservice_installer
+~/SmartService/smartservice_installers/install_scripts/smartservice_installer
 
-# For Redis logs and config
-mkdir -p /var/log/redis
-mkdir -p /etc/redis
+# Start Redis dump services
+service redis-low-frequency-dump start
+service redis-medium-frequency-dump start
+service redis-high-frequency-dump start
+chkconfig redis-low-frequency-dump on
+chkconfig redis-medium-frequency-dump on
+chkconfig redis-high-frequency-dump on
+
+# change <REDIS_MASTER_HOSTNAME> to 127.0.0.1
+vim /etc/redis/redis_sentinel.conf
+
+# Start Redis Sentinel service
+service redis-sentinel start
+chkconfig redis-sentinel on
+
+# Install SmartService Recode python dependencies
+pip install cython gevent pysnmp ujson zmq mmh3 murmur fluent-logger pyyaml
+
+# Install OSA
+pushd ~/SmartService/osa
+rm -rf build/ osa.egg-info/
+python setup.py install
+popd
+
+# Install Core
+pushd ~/SmartService/commons/smartservice/core
+rm -rf *.html *.c *.so *.pyc
+popd
+pushd ~/SmartService/commons
+rm -rf build/ smartservice.egg-info/
+python setup.py install
+popd
+
+# Install SNMPler
+pushd ~/SmartService/smartservice_installer/rpms
+yum install smartservice-python-snmpler-0.0.1b-1.x86_64.rpm
+popd
+cp -r /opt/lib/python2.7/site-packages/snmpler/ ~/<virtualenv_name>/lib/python2.7/site-packages
+
+# Install gredis
+scp -r root@10.11.90.216:~/waki/gredis/ ~
+pushd ~/gredis
+rm -rf build/ gredis.egg-info/
+pushd hiredis
+make clean
+make static
+popd
+python setup.py install
+# python test/all.py
+popd
