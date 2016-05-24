@@ -34,3 +34,18 @@ brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" shiftit
+
+# Sublime Packages
+# Anaconda - Python IDE
+# SidebarEnhancement - Addition sidebar options
+# rsub - Open files from ssh
+#   Command: ssh -R 52968:localhost:52968 username@ip
+#   ~/.ssh/config
+#   -------------
+#   Host *
+#       RemoteForward 52698 localhost:52698
+
+# .bash_profile
+# echo "HELLO WORLD"
+# alias micovm='ssh -R 52968:localhost:52968 root@10.11.4.17'
+# alias teamvm='ssh root@10.11.90.216'
