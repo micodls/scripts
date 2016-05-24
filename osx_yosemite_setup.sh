@@ -1,8 +1,8 @@
+#!/usr/bin/env bash
 # install homebrew - counterpart of apt-get
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
-brew cask
 
 # Developer tools
 brew install wget
@@ -12,6 +12,7 @@ brew install python3
 brew install vim
 brew install redis
 brew install node
+brew install rpm
 
 # Python libraries
 pip install sphinx
@@ -24,6 +25,8 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install --appdir="/Applications" sublime-text3
 brew cask install --appdir="/Applications" pycharm-ce
+brew cask install --appdir="/Applications" tunnelblick
+
 
 # Nice to have
 brew cask install --appdir="/Applications" google-chrome
