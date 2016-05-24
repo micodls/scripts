@@ -8,7 +8,7 @@
 git clone ssh://git@10.11.8.1:7999/ssr/apple_push_notification.git
 git clone ssh://git@10.11.8.1:7999/ssr/captive_portal.git
 git clone ssh://git@10.11.8.1:7999/ssr/commons.git
-git clone ssh://git@10.11.8.1:7999/ssr/config_api.gitgit clone
+git clone ssh://git@10.11.8.1:7999/ssr/config_api.git
 git clone ssh://git@10.11.8.1:7999/ssr/customer_service_api.git
 git clone ssh://git@10.11.8.1:7999/ssr/default_config_webtool.git
 git clone ssh://git@10.11.8.1:7999/ssr/diameter_rf_plus_server.git
