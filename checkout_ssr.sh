@@ -29,3 +29,8 @@ git clone ssh://git@10.11.8.1:7999/ssr/osa.git
 git clone ssh://git@10.11.8.1:7999/ssr/packages_api.git
 git clone ssh://git@10.11.8.1:7999/ssr/smartservice_installers.git
 git clone ssh://git@10.11.8.1:7999/ssr/sms_gateway.git
+git clone ssh://git@10.11.8.1:7999/ssr/spa.git
+git clone ssh://git@10.11.8.1:7999/ssr/suds.git
+git clone ssh://git@10.11.8.1:7999/ssr/third_party_config.git
+git clone ssh://git@10.11.8.1:7999/ssr/tmp_dbobjects.git
+git clone ssh://git@10.11.8.1:7999/ssr/zeromq_device.git
