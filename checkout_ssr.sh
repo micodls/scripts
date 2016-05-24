@@ -4,7 +4,7 @@
 # TODO: support for HTTP clone
 # TODO: check if repo already cloned
 
-clone SmartService Recode
+# clone SmartService Recode
 git clone ssh://git@10.11.8.1:7999/ssr/apple_push_notification.git
 git clone ssh://git@10.11.8.1:7999/ssr/captive_portal.git
 git clone ssh://git@10.11.8.1:7999/ssr/commons.git
