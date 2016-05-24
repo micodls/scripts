@@ -26,7 +26,7 @@ brew tap caskroom/versions
 brew cask install --appdir="/Applications" sublime-text3
 brew cask install --appdir="/Applications" pycharm-ce
 brew cask install --appdir="/Applications" tunnelblick
-
+# mv /opt/homebrew-cask/Caskroom/tunnelblick/3.6.3_build_4560/Tunnelblick.app/ /Applications/
 
 # Nice to have
 brew cask install --appdir="/Applications" google-chrome
