@@ -3,10 +3,10 @@
 
 cd ~
 
-yum install git
+sudo yum install git
 
-yum groupinstall "Development tools"
-yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
+sudo yum groupinstall "Development tools"
+sudo yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
 
 # Python 2.7.11
 wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tar.xz
@@ -81,16 +81,16 @@ pip install cython gevent pysnmp ujson zmq mmh3 murmur fluent-logger pyyaml
 
 # Install OSA
 pushd ~/SmartService/osa
-rm -rf build/ osa.egg-info/
+sudo rm -rf build/ osa.egg-info/
 python setup.py install
 popd
 
 # Install Core
 pushd ~/SmartService/commons/smartservice/core
-rm -rf *.html *.c *.so *.pyc
+sudo rm -rf *.html *.c *.so *.pyc
 popd
 pushd ~/SmartService/commons
-rm -rf build/ smartservice.egg-info/
+sudo rm -rf build/ smartservice.egg-info/
 python setup.py install
 popd
 
@@ -103,7 +103,7 @@ cp -r /opt/lib/python2.7/site-packages/snmpler/ ~/<virtualenv_name>/lib/python2.
 # Install gredis
 scp -r root@10.11.90.216:~/waki/gredis/ ~
 pushd ~/gredis
-rm -rf build/ gredis.egg-info/
+sudo rm -rf build/ gredis.egg-info/
 pushd hiredis
 make clean
 make static
