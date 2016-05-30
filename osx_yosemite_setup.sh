@@ -15,7 +15,19 @@ brew install node
 brew install rpm
 
 # Python libraries
+pip install pyyaml
+pip install fluent-logger
+pip install murmur
+pip install ujson
+pip install gevent
+pip install geventhttpclient
+pip install zmq
+pip install pysnmp
+pip install cython
+pip install tldextract
 pip install sphinx
+pip install sphinxcontrib-napoleon
+pip install sphinx_rtd_theme # https://github.com/snide/sphinx_rtd_theme
 
 # JS Web Dev
 curl https://install.meteor.com | sh
@@ -34,6 +46,11 @@ brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" shiftit
+
+# Git config
+git config --global user.name "Paolo Miguel M. de los Santos"
+git config --global user.email mico.delossantos@voyagerinnovation.com
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Sublime Packages
 # Anaconda - Python IDE
