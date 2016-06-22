@@ -24,6 +24,8 @@ sudo yum install libxml2-devel
 sudo yum install ruby ruby-devel
 sudo yum install rubygems
 sudo yum install rpm-build
+# sudo yum install httpd
+# sudo yum install telnet
 
 gem install fpm -v 1.4.0
 
@@ -90,7 +92,8 @@ chkconfig redis-low-frequency-dump on
 chkconfig redis-medium-frequency-dump on
 chkconfig redis-high-frequency-dump on
 
-# change <REDIS_MASTER_HOSTNAME> to 127.0.0.1
+echo 'change <REDIS_MASTER_HOSTNAME> to 127.0.0.1'
+sleep 3
 vim /etc/redis/redis_sentinel.conf
 
 # Start Redis Sentinel service
@@ -117,6 +120,7 @@ pip install tldextract
 pip install cryptography
 pip install scp
 pip install flask
+pip install readline
 
 # Python documentations
 pip install sphinx
@@ -183,6 +187,7 @@ chown -R td-agent:td-agent /var/opt/smartservice/
 cp /etc/td-agent/td-agent.conf /etc/td-agent/td-agent.conf.bak
 cp /etc/td-agent/td-agent_aggregator.conf /etc/td-agent/td-agent.conf
 echo "Edit FLUENT_AGGREGATOR_ACTIVE_HOSTNAME and FLUENT_AGGREGATOR_BACKUP_HOSTNAME"
+sleep 3
 vim /etc/td-agent/td-agent.conf
 service td-agent start
 chkconfig td-agent on
@@ -223,7 +228,10 @@ tar xvf rapidjson-1.0.2.tar.gz
 pushd rapidjson-1.0.2/
 mkdir build
 pushd build
-cmakeß
+cmake
 make && make install
 popd
 popd
+
+# close firewall - for web server
+service iptables stop
