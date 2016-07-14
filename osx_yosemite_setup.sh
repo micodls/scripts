@@ -59,6 +59,7 @@ brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" shiftit
 brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" evernote
+brew cask install --appdir="/Applications" rdm
 
 # Git config
 git config --global user.name "Paolo Miguel M. de los Santos"
