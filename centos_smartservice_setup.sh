@@ -47,9 +47,9 @@ virtualenv <virtualenv_name> -p python2.7
 source <virtualenv_name>/bin/activate
 
 # Clone SmartSerice Recode
-mkdir SmartService
+mkdir smartservicerecode
 git clone http://pmdelossantos@10.11.8.1:7990/scm/~pmdelossantos/scripts.git
-pushd SmartService
+pushd smartservicerecode
 ../scripts/checkout_ssr.sh
 popd
 
@@ -82,7 +82,7 @@ mkdir -p /etc/redis
 # SmartService dependencies
 # Install all
 # fn + f8 to exit
-~/SmartService/smartservice_installers/install_scripts/smartservice_installer
+~/smartservicerecode/smartservice_installers/install_scripts/smartservice_installer
 
 # Start Redis dump services
 service redis-low-frequency-dump start
