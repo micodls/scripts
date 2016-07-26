@@ -16,6 +16,7 @@ git clone git@git.corp.voyager.ph:smartservicerecode/diameter_rf_plus_server.git
 git clone git@git.corp.voyager.ph:smartservicerecode/dev_tools.git
 git clone git@git.corp.voyager.ph:smartservicerecode/events_api.git
 git clone git@git.corp.voyager.ph:smartservicerecode/file_synchronizer.git
+git clone git@git.corp.voyager.ph:smartservicerecode/gredis.git
 git clone git@git.corp.voyager.ph:smartservicerecode/google_cloud_messaging.git
 git clone git@git.corp.voyager.ph:smartservicerecode/httplib.git
 git clone git@git.corp.voyager.ph:smartservicerecode/mobile_application_api.git
