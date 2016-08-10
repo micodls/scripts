@@ -14,6 +14,7 @@ brew install redis
 brew install node
 brew install rpm
 brew install plantuml
+brew install netcat
 
 # Python Refactoring
 pip install pylint
@@ -61,6 +62,7 @@ brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" rdm
 brew cask install --appdir="/Applications" slack
+brew cask install --appdir="/Applications" wireshark
 
 # Git config
 git config --global user.name "Paolo Miguel M. de los Santos"
