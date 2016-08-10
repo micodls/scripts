@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+git clone git@git.corp.voyager.ph:netcastv3/wammp-bridge.git
+git clone git@git.corp.voyager.ph:netcastv3/transmitter-sms.git
+git clone git@git.corp.voyager.ph:netcastv3/transmitter-mms.git
+git clone git@git.corp.voyager.ph:netcastv3/stats-philam.git
+git clone git@git.corp.voyager.ph:netcastv3/stats-bdo_remit.git
+git clone git@git.corp.voyager.ph:netcastv3/report-meralco.git
+git clone git@git.corp.voyager.ph:netcastv3/report-csg_proxy.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast_tools.git
+git clone git@git.corp.voyager.ph:netcastv3/netcastv3-daily_report-active_deactivated_accounts.git
+git clone git@git.corp.voyager.ph:netcastv3/netcastv3-admin_tool.git
+git clone git@git.corp.voyager.ph:netcastv3/netcastv3-account_admin.git
+git clone git@git.corp.voyager.ph:netcastv3/netcastv3.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-vmobile-reports.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-v2-bdo_remit.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-meralco-stats.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-hsbc-stats.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-gem4.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-gem3.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-convergys-stats.git
+git clone git@git.corp.voyager.ph:netcastv3/netcast-avon-reports.git
+git clone git@git.corp.voyager.ph:netcastv3/incoming-watcher-391.git
+git clone git@git.corp.voyager.ph:netcastv3/incoming-watcher-392.git
+git clone git@git.corp.voyager.ph:netcastv3/mo_redirector.git
+git clone git@git.corp.voyager.ph:netcastv3/keep-alive.git
+git clone git@git.corp.voyager.ph:netcastv3/incoming-watcher-gsm_modem.git
+git clone git@git.corp.voyager.ph:netcastv3/gsmmodem.git
+git clone git@git.corp.voyager.ph:netcastv3/ftp_broadcast_meralco.git
+git clone git@git.corp.voyager.ph:netcastv3/ftp_broadcaster.git
+git clone git@git.corp.voyager.ph:netcastv3/ftp_bridge_middleware.git
+git clone git@git.corp.voyager.ph:netcastv3/exclusion_web.git
+git clone git@git.corp.voyager.ph:netcastv3/demo_banks.git
+git clone git@git.corp.voyager.ph:netcastv3/callback_handler.git
