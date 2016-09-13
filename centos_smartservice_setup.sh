@@ -24,6 +24,15 @@ sudo yum install libxml2-devel
 sudo yum install ruby ruby-devel
 sudo yum install rubygems
 sudo yum install rpm-build
+
+# mysql
+# If daemon fails to start,
+# rm -rf /var/lib/mysql/
+# rm -rf /etc/my.cnf
+sudo yum install mysql-server
+sudo /sbin/chkconfig --levels 235 mysqld
+sudo service mysqld start
+sudo mysql_secure_installation
 # sudo yum install httpd
 # sudo yum install telnet
 
