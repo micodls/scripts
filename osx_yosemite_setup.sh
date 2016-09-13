@@ -16,6 +16,11 @@ brew install rpm
 brew install plantuml
 brew install netcat
 
+# AMP stack
+# brew install homebrew/php/phpmyadmin
+# brew install mysql
+# https://coolestguidesontheplanet.com/set-amp-osx-10-9-mavericks-homebrew/
+
 # Python Refactoring
 pip install pylint
 pip install testfixtures
@@ -63,11 +68,17 @@ brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" rdm
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" wireshark
+brew cask install --appdir="/Applications" filezilla
 
 # Git config
 git config --global user.name "Paolo Miguel M. de los Santos"
 git config --global user.email mico.delossantos@voyagerinnovation.com
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Docker
+brew cask install --appdir="/Applications" kitematic
+brew cask install --appdir="/Applications" docker
+brew cask install --appdir="/Applications" docker-toolbox
 
 # Sublime Packages
 # Anaconda - Python IDE
