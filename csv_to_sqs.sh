@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# usage: ./parser.sh <FILENAME> <SQS URL>
-# example: ./parser.sh file.csv https://sqs.ap-southeast-1.amazonaws.com/853765034474/vcm-apn-dev
+# usage: ./csv_to_sqs.sh <FILENAME> <SQS URL>
+# example: ./csv_to_sqs.sh file.csv https://sqs.ap-southeast-1.amazonaws.com/853765034474/vcm-apn-dev
 FILENAME=$1
 URL=$2
 RESULTFILE="${FILENAME}-result.txt"
