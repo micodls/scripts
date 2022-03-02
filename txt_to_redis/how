@@ -1,0 +1,10 @@
+1. download extracted logs
+2. retain raw json to be placed in redis instead
+    - removed not needed fields
+    - convert x-boost-member-uid to msisdn
+    - remove non +63 mins = duplicate rrn
+3. remove + in mins
+3. add paymaya queue with reference to min ending
+4. convert datetime to timestamp using: awk -F';' -v OFS=';' '$1 {cmd="date -jf \"%Y-%m-%d %H:%M:%S\" \""$1"\" +%s"; cmd | getline $1; close(cmd)} 1' asd.txt > dsa.txt
+5. add 000 to end of all timestamp so that it will be in milliseconds
+6. add millisecond timestamp to combined file
