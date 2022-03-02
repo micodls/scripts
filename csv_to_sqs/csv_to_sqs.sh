@@ -10,7 +10,7 @@ echo "" > $RESULTFILE
 
 while IFS=, read -r body || [ -n "$body" ]
 do
-    echo "Processing:\n\body: $body" >> $RESULTFILE
+    echo "Processing:\n\nbody: $body" >> $RESULTFILE
     aws sqs send-message --queue-url $2 --message-body "$body" >> $RESULTFILE
     # done
 done < $FILENAME
