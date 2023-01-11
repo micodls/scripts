@@ -1,5 +1,5 @@
-// extracted from cloudwatch logs
-// formatted manually - remove first column, remove unwanted logs, remove unwanted fields, replace double double quotes to single double quotes
+// extracted from cloudwatch insights
+// formatted manually - remove first column and first row, reverse order, remove unwanted logs, remove unwanted fields, replace double double quotes to single double quotes
 
 const fs = require('fs');
 const moment = require('moment');
